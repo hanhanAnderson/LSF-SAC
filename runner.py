@@ -30,17 +30,8 @@ class Runner:
 
     def run(self, num):
         time_steps, train_steps, evaluate_steps = 0, 0, 0  # 0,0,-1
-        while time_steps < self.args.n_steps or train_steps < 70000:
-        # while time_steps < self.args.n_steps:
+        while time_steps < self.args.n_steps:
             print('Run {}, time_steps {}, train_steps {}'.format(num, time_steps, train_steps))
-
-            """if train_steps % 200 == 0:
-                # print('Run {}, time_steps {}， train_steps {}'.format(num, time_steps, train_steps))
-                win_rate, episode_reward = self.evaluate()
-                self.e_win_rates.append(win_rate)
-                self.e_episode_rewards.append(episode_reward)
-                self.e_plt(num)"""
-            # evaluate_cycle= 5000
             if time_steps // self.args.evaluate_cycle > evaluate_steps:
                 if evaluate_steps % 30 == 0:
                     win_rate, episode_reward = self.evaluate(save_replay = True)
@@ -107,25 +98,6 @@ class Runner:
         plt.savefig(self.save_path + '/plt_{}.png'.format(num), format='png')
         np.save(self.save_path + '/win_rates_{}'.format(num), self.win_rates)
         np.save(self.save_path + '/episode_rewards_{}'.format(num), self.episode_rewards)
-        plt.close()
-
-    def e_plt(self, num):
-        plt.figure()
-        plt.ylim([0, 105])
-        plt.cla()
-        plt.subplot(2, 1, 1)
-        plt.plot(range(len(self.e_win_rates)), self.e_win_rates)
-        plt.xlabel('epochs*200')
-        plt.ylabel('win_rates')
-
-        plt.subplot(2, 1, 2)
-        plt.plot(range(len(self.e_episode_rewards)), self.e_episode_rewards)
-        plt.xlabel('epochs*200')
-        plt.ylabel('episode_rewards')
-
-        plt.savefig(self.save_path + '/e_plt_{}.png'.format(num), format='png')
-        np.save(self.save_path + '/e_win_rates_{}'.format(num), self.e_win_rates)
-        np.save(self.save_path + '/e_episode_rewards_{}'.format(num), self.e_episode_rewards)
         plt.close()
 
 

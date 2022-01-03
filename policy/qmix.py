@@ -158,39 +158,6 @@ class QMIX:
             message = message.permute(0, 2, 1, 3).contiguous().view(bs * self.n_agents, -1) #shape (3,9)
             agent_inputs = torch.cat([inputs, message], dim=1)
             logits = self._logits(episode_num, agent_inputs)
-
-            """
-            m_sample
-            tensor([[-0.1998,  0.2178,  0.0718,  1.4496, -0.3582, -0.6019, -1.8840,  1.4017,
-                     -0.1017],
-                    [-0.1682, -0.2860,  0.0284,  1.0920, -0.4180,  0.8369,  1.5309, -0.6954,
-                      0.2244],
-                    [-0.3476, -0.3097,  0.6931,  0.5904,  1.0163, -1.0165, -0.1685,  0.8008,
-                      0.2508]], device='cuda:0', grad_fn=<AddBackward0>)
-            
-            message_before_permute
-            tensor([[[[-0.1998,  0.2178,  0.0718],
-                      [ 1.4496, -0.3582, -0.6019],
-                      [-1.8840,  1.4017, -0.1017]],
-            
-                     [[-0.1682, -0.2860,  0.0284],
-                      [ 1.0920, -0.4180,  0.8369],
-                      [ 1.5309, -0.6954,  0.2244]],
-            
-                     [[-0.3476, -0.3097,  0.6931],
-                      [ 0.5904,  1.0163, -1.0165],
-                      [-0.1685,  0.8008,  0.2508]]]], device='cuda:0',
-                   grad_fn=<ViewBackward>)
-            
-            AfterPermute:
-            tensor([[-0.1998,  0.2178,  0.0718, -0.1682, -0.2860,  0.0284, -0.3476, -0.3097,
-                      0.6931],
-                    [ 1.4496, -0.3582, -0.6019,  1.0920, -0.4180,  0.8369,  0.5904,  1.0163,
-                     -1.0165],
-                    [-1.8840,  1.4017, -0.1017,  1.5309, -0.6954,  0.2244, -0.1685,  0.8008,
-                      0.2508]], device='cuda:0', grad_fn=<ViewBackward>)
-            """
-
             q_eval, self.eval_hidden = self.eval_rnn(agent_inputs, self.eval_hidden)
             # q_eval
 
@@ -227,14 +194,8 @@ class QMIX:
 
             q_target = q_target.view(episode_num, self.n_agents, -1)
             #
-            # mu_n = mu_n.view(episode_num, self.n_agents, -1)
-            # sigma_n = sigma_n.view(episode_num, self.n_agents, -1)
-            # logits_n = logits_n.view(episode_num, self.n_agents, -1)
-            # m_sample_n = m_sample_n.view(episode_num, self.n_agents, -1)
-
             q_targets.append(q_target)
-            #########################################################################################################
-            ###
+
             agent_outs, self.peval_hidden = self.eval_pagent(inputs, self.peval_hidden)
             avail_actions_ = avail_u[:, transition_idx]
             reshaped_avail_actions = avail_actions_.reshape(episode_num * self.n_agents, -1)
@@ -324,8 +285,6 @@ class QMIX:
         comm_loss = info_loss + comm_beta * KL_loss + comm_entropy_beta * entropy_loss
 
         loss += comm_loss
-        # comm_beta = torch.Tensor([comm_beta])
-        # comm_entropy_beta = torch.Tensor([comm_entropy_beta])
 ###################
 
         self.optimizer.zero_grad()
