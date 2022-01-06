@@ -1,6 +1,6 @@
 # LSF-SAC
 
-Pytorch implementations of the paper "[Value Functions Factorization with Latent State Information Sharing in Decentralized  Multi-Agent Policy Gradients]"(https://arxiv.org/abs/2201.01247) and several other multi-agent reinforcement learning algorithms, including 
+Pytorch implementations of the paper [Value Functions Factorization with Latent State Information Sharing in Decentralized  Multi-Agent Policy Gradients](https://arxiv.org/abs/2201.01247) and several other multi-agent reinforcement learning algorithms, including 
 [IQL](https://arxiv.org/abs/1511.08779),
 [QMIX](https://arxiv.org/abs/1803.11485), [VDN](https://arxiv.org/abs/1706.05296), 
 [COMA](https://arxiv.org/abs/1705.08926), [QTRAN](https://arxiv.org/abs/1905.05408)(both **QTRAN-base** and **QTRAN-alt**),
@@ -23,7 +23,7 @@ which are the state of the art MARL algorithms. The paper implementation and oth
 
 
 ## Quick Start
-
+Cancel changes
 ```shell
 $ python main.py --map=3m --alg=qmix
 ```
