@@ -1,6 +1,6 @@
 # LSF-SAC
 
-Pytorch implementations of the paper "Value Functions Factorization with Latent State Information Sharing in Decentralized  Multi-Agent Policy Gradients" and several other multi-agent reinforcement learning algorithms, including 
+Pytorch implementations of the paper "[Value Functions Factorization with Latent State Information Sharing in Decentralized  Multi-Agent Policy Gradients]"(https://arxiv.org/abs/2201.01247) and several other multi-agent reinforcement learning algorithms, including 
 [IQL](https://arxiv.org/abs/1511.08779),
 [QMIX](https://arxiv.org/abs/1803.11485), [VDN](https://arxiv.org/abs/1706.05296), 
 [COMA](https://arxiv.org/abs/1705.08926), [QTRAN](https://arxiv.org/abs/1905.05408)(both **QTRAN-base** and **QTRAN-alt**),
@@ -49,3 +49,17 @@ Check the website for several replay examples
 [here](https://sites.google.com/view/sacmm)
 
 If you want to see the replay from your own run, make sure the `replay_dir` is an absolute path, which can be set in `./common/arguments.py`. Then the replays of each evaluation will be saved, you can find them in your path.
+
+## Citation
+
+If you find this helpful to your research, please consider citing this paper as
+```
+@misc{zhou2022value,
+      title={Value Functions Factorization with Latent State Information Sharing in Decentralized Multi-Agent Policy Gradients}, 
+      author={Hanhan Zhou and Tian Lan and Vaneet Aggarwal},
+      year={2022},
+      eprint={2201.01247},
+      archivePrefix={arXiv},
+      primaryClass={cs.MA}
+}
+```
