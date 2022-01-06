@@ -23,7 +23,6 @@ which are the state of the art MARL algorithms. The paper implementation and oth
 
 
 ## Quick Start
-Cancel changes
 ```shell
 $ python main.py --map=3m --alg=qmix
 ```
