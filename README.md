@@ -24,7 +24,7 @@ which are the state of the art MARL algorithms. The paper implementation and oth
 
 ## Quick Start
 ```shell
-$ python main.py --map=3m --alg=qmix
+$ python main.py --map=3m
 ```
 
 Directly run the `main.py`, then the algorithm will start **training** on map `3m`. **Note** CommNet and G2ANet need an external training algorithm, so the name of them are like `reinforce+commnet` or `central_v+g2anet`, all the algorithms we provide are written in `./common/arguments.py`.
