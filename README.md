@@ -53,12 +53,10 @@ If you want to see the replay from your own run, make sure the `replay_dir` is a
 
 If you find this helpful to your research, please consider citing this paper as
 ```
-@misc{zhou2022value,
-      title={Value Functions Factorization with Latent State Information Sharing in Decentralized Multi-Agent Policy Gradients}, 
-      author={Hanhan Zhou and Tian Lan and Vaneet Aggarwal},
-      year={2022},
-      eprint={2201.01247},
-      archivePrefix={arXiv},
-      primaryClass={cs.MA}
+@article{zhou2022value,
+  title={Value Functions Factorization with Latent State Information Sharing in Decentralized Multi-Agent Policy Gradients},
+  author={Zhou, Hanhan and Lan, Tian and Aggarwal, Vaneet},
+  journal={arXiv preprint arXiv:2201.01247},
+  year={2022}
 }
 ```
