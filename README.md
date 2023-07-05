@@ -8,7 +8,7 @@ Pytorch implementations of the paper [Value Functions Factorization with Latent 
 [COMA](https://arxiv.org/abs/1705.08926), [QTRAN](https://arxiv.org/abs/1905.05408)(both **QTRAN-base** and **QTRAN-alt**),
 [MAVEN](https://arxiv.org/abs/1910.07483), [CommNet](https://arxiv.org/abs/1605.07736), 
 [DyMA-CL](https://arxiv.org/abs/1909.02790?context=cs.MA), and [G2ANet](https://arxiv.org/abs/1911.10715), 
-which are the state of the art MARL algorithms. The paper implementation and other algorithms' implementation is based on [starry-sky6688's qmix impplementation](https://github.com/starry-sky6688/StarCraft).
+which are the state of the art MARL algorithms. The paper implementation and other algorithms' implementation is based on [pymarl2](https://github.com/hijkzzz/pymarl2).
 
 ## Requirements
 
@@ -78,6 +78,8 @@ If you find this helpful to your research, please consider citing this paper as
 
 + [pymarl](https://github.com/oxwhirl/pymarl)
 + [QMIX Impplementation](https://github.com/starry-sky6688/StarCraft)
+
+The paper implementation and other algorithms' implementation is based on [starry-sky6688's qmix impplementation](https://github.com/starry-sky6688/StarCraft).
 
 ## Quick Start
 ```shell
