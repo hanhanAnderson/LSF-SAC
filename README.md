@@ -5,9 +5,9 @@
 Pytorch implementations of the paper [Value Functions Factorization with Latent State Information Sharing in Decentralized  Multi-Agent Policy Gradients](https://arxiv.org/abs/2201.01247) and several other multi-agent reinforcement learning algorithms, including 
 [IQL](https://arxiv.org/abs/1511.08779),
 [QMIX](https://arxiv.org/abs/1803.11485), [VDN](https://arxiv.org/abs/1706.05296), 
-[COMA](https://arxiv.org/abs/1705.08926), [QTRAN](https://arxiv.org/abs/1905.05408)(both **QTRAN-base** and **QTRAN-alt**),
-[MAVEN](https://arxiv.org/abs/1910.07483), [CommNet](https://arxiv.org/abs/1605.07736), 
-[DyMA-CL](https://arxiv.org/abs/1909.02790?context=cs.MA), and [G2ANet](https://arxiv.org/abs/1911.10715), 
+[QTRAN](https://arxiv.org/abs/1905.05408),
+[QPLEX](https://arxiv.org/abs/1910.07483), [WQMIX](https://arxiv.org/abs/2006.10800), 
+[DOP](https://arxiv.org/abs/2007.12322), and [COMA](https://arxiv.org/abs/1705.08926), 
 which are the state of the art MARL algorithms. The paper implementation and other algorithms' implementation is based on [pymarl2](https://github.com/hijkzzz/pymarl2).
 
 ## Requirements
