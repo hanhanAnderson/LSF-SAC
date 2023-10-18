@@ -71,10 +71,14 @@ Results on other maps are still in training, we will update them later.
 If you find this helpful to your research, please consider citing this paper as
 ```
 @article{zhou2022value,
-  title={Value Functions Factorization with Latent State Information Sharing in Decentralized Multi-Agent Policy Gradients},
-  author={Zhou, Hanhan and Lan, Tian and Aggarwal, Vaneet},
-  journal={arXiv preprint arXiv:2201.01247},
-  year={2022}
+  author = {Zhou, Hanhan and Lan, Tian and Aggarwal, Vaneet},
+  journal = {IEEE Transactions on Emerging Topics in Computational Intelligence},
+  title = {Value Functions Factorization With Latent State Information Sharing in Decentralized Multi-Agent Policy Gradients},
+  year = {2023},
+  volume = {7},
+  number = {5},
+  pages = {1351-1361},
+  publisher = {IEEE}
 }
 ```
 
